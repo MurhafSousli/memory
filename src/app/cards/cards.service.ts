@@ -17,7 +17,7 @@ export class CardsService {
   }
 
   getFontAwesomeCards(): Observable<any> {
-    return this.http.get('../../assets/cards.json')
+    return this.http.get(prefixRepo('../../assets/cards.json'))
       .map((res)=> {
         let icons = res.json();
         return icons.map(icon => new Card(guid(), this.faTemplate(icon)));
@@ -41,3 +41,7 @@ function guid() {
   return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
     s4() + '-' + s4() + s4() + s4();
 }
+
+var prefixRepo = (path) => {
+  return 'memory-card' + path;
+};
