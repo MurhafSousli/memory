@@ -1,0 +1,46 @@
+{
+  "project": {
+    "version": "1.0.0-beta.17",
+    "name": "wptestproject"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": "assets",
+      "index": "index.html",
+      "main": "main.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.json",
+      "prefix": "",
+      "mobile": false,
+      "styles": [
+        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "../node_modules/animate.css/animate.min.css",
+        "styles.sass"
+      ],
+      "scripts": [],
+      "environments": {
+        "source": "environments/environment.ts",
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "addons": [],
+  "packages": [],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "sass",
+    "prefixInterfaces": false
+  }
+}

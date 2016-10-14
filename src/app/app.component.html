@@ -1,0 +1,13 @@
+<div class="app-wrapper">
+
+  <header>
+    <h1>{{title}}</h1>
+  </header>
+  <div class="container">
+    <div class="toolbar">
+      <button (click)="memory.newGame()">New Game</button>
+      <span>moves: {{memory.moves}}</span>
+    </div>
+    <memory-board></memory-board>
+  </div>
+</div>
