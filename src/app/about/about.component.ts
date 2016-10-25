@@ -14,6 +14,6 @@ export class AboutComponent {
 }
 
 var prefixPath = (path) => {
-  return 'memory/' + path;
+  return 'memory' + path;
 };
 

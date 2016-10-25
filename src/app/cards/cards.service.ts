@@ -30,7 +30,7 @@ export class CardsService {
 }
 
 
-/** Generate ID between 1-50 */
+/** Generate unique ID */
 function guid() {
   function s4() {
     return Math.floor((1 + Math.random()) * 0x10000)
@@ -43,5 +43,5 @@ function guid() {
 }
 
 var prefixRepo = (path) => {
-  return 'memory-card/' + path;
+  return 'memory' + path;
 };
