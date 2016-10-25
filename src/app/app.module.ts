@@ -1,4 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
@@ -15,8 +16,8 @@ import {StateComponent} from './state/state.component';
 import {RouterModule} from "@angular/router";
 import {AboutComponent} from './about/about.component';
 import {ResultComponent} from './result/result.component';
-import { ResultPipe } from './result/result.pipe';
-import { LogoComponent } from './logo/logo.component';
+import {ResultPipe} from './result/result.pipe';
+import {LogoComponent} from './logo/logo.component';
 
 
 @NgModule({
@@ -42,7 +43,11 @@ import { LogoComponent } from './logo/logo.component';
       {path: 'about', component: AboutComponent},
     ])
   ],
-  providers: [MemoryService, CardsService],
+  providers: [
+    MemoryService,
+    CardsService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
