@@ -1,13 +1,41 @@
-$font-color: #333333
-$board-color: #2EBD95
-//#4AC2AC
-//darkcyan
-$card-color: #343DA0
-//
-$card-bg: white
-$header-bg: #6E623C
-$header-color: #4AC2AC
+@import url('https://fonts.googleapis.com/css?family=Bungee|Bungee+Outline')
 
-$sec-color: #D72222
+$base-font:  'Bungee', cursive
+$sec-font: 'Bungee Outline', cursive
+
+$base-color: #38393B
+$bg-color: #FCFBE5
+$board-color: #96BBBB
+
+$light-color: #fff2ba
+$gold-color: #ffbf00
+
+$light-bigshadow: 0 5px 50px $light-color
+$light-smallshadow: 0 0 10px $light-color
+
+$card-color: #9C1C11
+$card-bg: #FCFBE5
+
+$woodcolor: #603309
+
+$base-border: 2px solid $base-color
+
+$wood-boxshadow: 0 0 10px $woodcolor
+
+$base-boxshadow: 0 0 10px $base-color
+$hover-boxshadow: 0 0 5px $base-color
+
+$card-boxshadow: 0 0 5px $base-color
+$card-hovershadow: 0 0 15px $light-color
+
+$share-boxshadow: 1px 0 10px $woodcolor
+$share-hovershadow: 5px 0 30px $light-color
 
 $container-width: 700px
+
+$card-width: 70px
+$card-height: 100px
+
+.card-bg
+  background: linear-gradient(45deg, hsla(317, 92%, 42%, 1) 0%, hsla(317, 92%, 42%, 0) 70%), linear-gradient(135deg, hsla(18, 97%, 46%, 1) 10%, hsla(18, 97%, 46%, 0) 80%), linear-gradient(225deg, hsla(45, 92%, 47%, 1) 10%, hsla(45, 92%, 47%, 0) 80%), linear-gradient(315deg, hsla(111, 99%, 50%, 1) 100%, hsla(111, 99%, 50%, 0) 70%)
+

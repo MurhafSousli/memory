@@ -1,41 +1,50 @@
 .card
-  width: 86px
-  height: 120px
+  width: $card-width
+  height: $card-height
   margin: 10px
-  color: white
   cursor: pointer
   position: relative
 
   .front, .back
+    background-color: $card-bg
+    position: absolute
+    width: 100%
+    height: 100%
+    transform-style: preserve-3d
     display: flex
     justify-content: center
     align-items: center
     border-radius: 6px
     font-size: 3em
-
-    position: absolute
+    box-shadow: $card-boxshadow
     backface-visibility: hidden
-    width: 100%
-    height: 100%
-
     z-index: 2
-    transition: transform .35s linear
-    transform-style: preserve-3d
-
+    transition: all .35s linear
+    &:hover
+      box-shadow: $card-hovershadow
 
 .front
-  background-color: $card-color
   color: $card-bg
   transform: perspective(600px) rotateY(0deg)
+  position: relative
+  &-inner
+    position: absolute
+    left: 5px
+    right: 5px
+    bottom: 5px
+    top: 5px
+    display: flex
+    justify-content: center
+    align-items: center
+    @extend .card-bg
 
 .back
-  background-color: $card-bg
   color: $card-color
   transform: perspective(600px) rotateY(-180deg)
 
-.flipped .front
-  transform: rotateY(-180deg)
-
-.flipped .back
-  transform: rotateY(0deg)
+.flipped
+  .front
+    transform: rotateY(-180deg)
+  .back
+    transform: rotateY(0deg)
 

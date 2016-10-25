@@ -7,25 +7,37 @@ export class MemoryService {
 
   defaultTemplate = '<i class="fa fa-info" aria-hidden="true"></i>';
 
-  cards: Card[];
+  cards: Card[] = [];
   memoryCards: Card[];
   flippedCards: number;
 
   moves: number;
+  isOver: boolean = false;
 
   constructor(private cardsService: CardsService) {
     this.newGame();
   }
 
   newGame() {
+    this.isOver = false;
     this.memoryCards = [];
     this.flippedCards = 0;
     this.moves = 0;
 
+    if (this.cards.length) {
+      this.cards.map((card)=> {
+        card.flipped = false;
+      });
+      setTimeout(()=>{
+        this.cards = shuffle(this.cards);
+      },300);
+      return;
+    }
+
     this.cards = [];
     this.cardsService.getCards()
       .subscribe(cards=> {
-        cards.map(card=>{
+        cards.map(card=> {
           /** push the card twice with different ref */
           this.cards.push(card);
           this.cards.push(Object.assign({}, card));
@@ -58,7 +70,7 @@ export class MemoryService {
           this.memoryCards = [];
 
           if (this.flippedCards === this.cards.length) {
-            this.result();
+            this.isOver = true;
           }
         }
         else {
@@ -73,9 +85,6 @@ export class MemoryService {
 
   }
 
-  result() {
-
-  }
 
 }
 

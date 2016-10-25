@@ -1,13 +1,21 @@
 <div class="app-wrapper">
-
   <header>
     <h1>{{title}}</h1>
   </header>
-  <div class="container">
-    <div class="toolbar">
-      <button (click)="memory.newGame()">New Game</button>
-      <span>moves: {{memory.moves}}</span>
+  <div class="menu">
+    <div class="menu-item">
+      <button (click)="newGame()">New</button>
     </div>
-    <memory-board></memory-board>
+    <div class="menu-item">
+      <button (click)="about()">About</button>
+    </div>
   </div>
+  <div class="main">
+    <router-outlet></router-outlet>
+  </div>
+  <footer>
+    <div class="share-overlay">
+      <share-buttons [url]="'https://MurhafSousli.github.io/memory'" [count]="true"></share-buttons>
+    </div>
+  </footer>
 </div>

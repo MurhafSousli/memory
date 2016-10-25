@@ -1,7 +1,7 @@
 {
   "project": {
-    "version": "1.0.0-beta.17",
-    "name": "wptestproject"
+    "version": "1.0.0-beta.18",
+    "name": "memory"
   },
   "apps": [
     {
@@ -15,8 +15,6 @@
       "prefix": "",
       "mobile": false,
       "styles": [
-        "../node_modules/font-awesome/css/font-awesome.min.css",
-        "../node_modules/animate.css/animate.min.css",
         "styles.sass"
       ],
       "scripts": [],

@@ -1,0 +1,46 @@
+.share-overlay
+  position: fixed
+  top: 0
+  bottom: 0
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  z-index: 1011
+
+.sb-buttons
+  flex-direction: column
+  z-index: 1011
+
+  button
+    z-index: 1004
+    background-color: $bg-color !important
+    color: $woodcolor !important
+    border-radius: 0 100px 100px 0 !important
+    width: auto !important
+    margin: 5px 0 !important
+    box-shadow: $share-boxshadow
+    &:hover
+      color: $woodcolor !important
+    &:active
+      box-shadow: $share-hovershadow
+      margin-left: -10px !important
+
+  .sb-button
+    flex-direction: row !important
+    align-items: flex-start !important
+
+  .sb-button-count
+    margin-left: 15px
+    &:before
+      position: absolute
+      left: -10px !important
+      top: 50% !important
+      margin-top: -4px !important
+      content: ''
+      width: 0
+      height: 0
+      border-top: 5px solid transparent
+      border-right: 5px solid #e03237 !important
+      border-left: 5px solid transparent !important
+      border-bottom: 5px solid transparent !important
+

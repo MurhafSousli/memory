@@ -1,0 +1,51 @@
+result
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  z-index: 105
+
+.result
+  text-align: center
+  border: 2px solid white
+  background-color: white
+  max-width: 500px
+  max-height: 300px
+  width: 80%
+  border-radius: 10px
+  margin: 20px
+  box-shadow: 0 0 20px black
+  position: relative
+
+  &-bg
+    position: absolute
+    left: 5px
+    right: 5px
+    bottom: 5px
+    top: 5px
+    background-color: $board-color
+    background: url('./assets/result.png') repeat
+
+  &-overlay
+    z-index: 5
+
+  button
+    border: none
+    outline: 0
+    border-radius: 35px
+    width: 200px
+    height: 70px
+    color: $base-border
+    font-size: 1em
+    padding: 10px
+    transition: all .1s linear
+    cursor: pointer
+    box-shadow: $base-boxshadow
+    &:active
+      transform: scale(0.95)
+      box-shadow: $hover-boxshadow

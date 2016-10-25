@@ -3,13 +3,12 @@ import {Card} from "./card.class";
 import {Http} from "@angular/http";
 import {Observable} from "rxjs/Observable";
 import 'rxjs/add/operator/map';
+import {NgProgressService} from "ng2-progressbar";
 
 @Injectable()
 export class CardsService {
 
-
   constructor(private http: Http) {
-
   }
 
   getCards(): Observable<any> {
@@ -25,7 +24,7 @@ export class CardsService {
   }
 
   faTemplate(icon) {
-    return '<i class="fa '+ icon +' aria-hidden="true"></i>';
+    return '<i class="fa ' + icon + ' aria-hidden="true"></i>';
   }
 
 }
@@ -38,10 +37,11 @@ function guid() {
       .toString(16)
       .substring(1);
   }
+
   return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
     s4() + '-' + s4() + s4() + s4();
 }
 
 var prefixRepo = (path) => {
-  return 'memory-card' + path;
+  return 'memory-card/' + path;
 };

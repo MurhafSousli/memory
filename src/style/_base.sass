@@ -1,33 +1,36 @@
-@import url('https://fonts.googleapis.com/css?family=Lakki+Reddy')
-
 body, html
-  margin: 0
-  font-family: 'Lakki Reddy', cursive
-  color: $font-color
+  font-family: $base-font
+  color: $base-color
+
+body
+  background-color: $woodcolor
+  background: url('./assets/background.png') repeat
 
 .app-wrapper
   display: flex
   flex-direction: column
   height: 100vh
 
+main
+  position: relative
 
-.container
+home, about, .main
   display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
   flex: 1
 
-header, footer
-  background-color: $font-color
-  color: white
-  text-align: center
+h1, h2, h3, h4
+  margin: 10px
+  font-weight: 400
 
-button
-  border: 0
-  outline: 0
-  background-color: $sec-color
+.loading
+  font-family: $sec-font
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 3em
   color: white
-  cursor: pointer
-  padding: 5px 10px
-  border-radius: 2px
+  height: 100vh
+
+
+
+

@@ -1,4 +1,9 @@
 <div class="card" [class.flipped]="card.flipped" (click)="memory.flipCard(card)">
-  <div class="back" [innerHtml]="card.template | sanitizeHtml"></div>
-  <div class="front" [innerHtml]="memory.defaultTemplate  | sanitizeHtml"></div>
+  <div class="back" [innerHtml]="card.template | sanitizeHtml">
+  </div>
+  <div class="front" >
+    <div class="front-inner" [innerHtml]="memory.defaultTemplate  | sanitizeHtml">
+    </div>
+  </div>
 </div>
+

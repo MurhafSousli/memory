@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {MemoryService} from "../memory/memory.service";
 
 @Component({
@@ -7,7 +7,8 @@ import {MemoryService} from "../memory/memory.service";
 })
 export class MemoryBoardComponent implements OnInit {
 
-  constructor(private memory:MemoryService) { }
+  constructor(private memory: MemoryService) {
+  }
 
   ngOnInit() {
   }
