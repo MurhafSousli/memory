@@ -11,7 +11,7 @@ export class ResultPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
     if(value < 20){
-      return this.getImage(this.a);
+      return this.getImage(this.g);
     }
     if(value <30){
       return this.getImage(this.y);
