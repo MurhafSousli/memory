@@ -14,13 +14,14 @@ result
   text-align: center
   border: 2px solid white
   background-color: white
-  max-width: 500px
-  max-height: 300px
+  max-width: 480px
+  max-height: 360px
   width: 80%
   border-radius: 10px
   margin: 20px
   box-shadow: 0 0 20px black
   position: relative
+  padding: 5px
 
   &-bg
     position: absolute
@@ -32,14 +33,37 @@ result
     background: url('./assets/result.png') repeat
 
   &-overlay
+    flex: 1
     z-index: 5
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 20px
+
+  &-img
+    position: relative
+    background: url('./assets/wood.png') repeat
+    flex: 1
+    width: 100%
+    display: flex
+    justify-content: center
+    box-shadow: inset $base-boxshadow
+    
+    img
+      position: absolute
+      width: auto
+      max-height: 100%
+
+  &-number
+    color: #FE424D
 
   button
     border: none
     outline: 0
     border-radius: 35px
-    width: 200px
-    height: 70px
+    width: 190px
+    height: 50px
     color: $base-border
     font-size: 1em
     padding: 10px

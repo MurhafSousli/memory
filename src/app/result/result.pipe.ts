@@ -5,15 +5,27 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ResultPipe implements PipeTransform {
 
+  g = ['g1.jpg', 'g2.jpg'];
+  a = ['a1.jpg', 'a2.jpg'];
+  y = ['y1.jpg', 'y2.jpg', 'y3.jpg']
+
   transform(value: any, args?: any): any {
     if(value < 20){
-      return "WOW so nice";
+      return this.getImage(this.a);
     }
     if(value <30){
-      return "You can do better";
+      return this.getImage(this.y);
     }
     else
-      return "Alzheimer";
+      return this.getImage(this.a);
+  }
+
+  getImage(arr: string[]){
+    return "memory../../assets/img/" + this.getRandomImg(arr);
+  }
+
+  getRandomImg(arr: string[]){
+    return arr[Math.floor(Math.random()*arr.length)];
   }
 
 }

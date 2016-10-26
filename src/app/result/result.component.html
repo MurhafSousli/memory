@@ -1,7 +1,7 @@
 <div class="result container">
   <div class="result-overlay">
-    <h2>{{memory.moves | result}}</h2>
-    <p>Your Score is {{memory.moves}}</p>
+    <div class="result-img"><img [src]="memory.moves | result"/></div>
+    <p>Your Score is <span class="result-number">{{memory.moves}}</span></p>
     <button (click)="memory.newGame()">Play Again</button>
   </div>
   <div class="result-bg"></div>
