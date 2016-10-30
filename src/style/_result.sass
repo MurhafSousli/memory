@@ -19,7 +19,7 @@ result
   width: 80%
   border-radius: 10px
   margin: 20px
-  box-shadow: 0 0 20px black
+  box-shadow: 0 0 20px rgba(black, .8)
   position: relative
   padding: 5px
 
@@ -46,17 +46,17 @@ result
     background: url('./assets/wood.png') repeat
     flex: 1
     width: 100%
-    display: flex
-    justify-content: center
     box-shadow: inset $base-boxshadow
-    
+
     img
       position: absolute
-      width: auto
       max-height: 100%
+      margin: auto
+      right: 0
+      left: 0
 
   &-number
-    color: #FE424D
+    color: $moves-color
 
   button
     border: none

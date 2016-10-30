@@ -1,5 +1,5 @@
 <div class="board">
   <memory-card *ngFor="let card of memory.cards" [card]="card"></memory-card>
 </div>
-<result *ngIf="memory.isOver" class="animated fadeIn"></result>
+<result *ngIf="memory.isOver" class="animated rubberBand"></result>
 

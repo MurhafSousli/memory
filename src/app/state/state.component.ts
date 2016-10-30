@@ -3,8 +3,7 @@ import {MemoryService} from "../memory/memory.service";
 
 @Component({
   selector: 'state',
-  templateUrl: './state.component.html',
-  styleUrls: ['./state.component.sass']
+  templateUrl: './state.component.html'
 })
 export class StateComponent implements OnInit {
 
